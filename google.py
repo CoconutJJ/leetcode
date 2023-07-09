@@ -91,7 +91,8 @@ def maxBooked(A):
         if max_room is None:
             max_room = r
         else:
-            if isBefore((r, room_bookings[r]), (max_room, room_bookings[max_room])):
+            if isBefore((r, room_bookings[r]),
+                        (max_room, room_bookings[max_room])):
                 max_room = r
 
     return max_room

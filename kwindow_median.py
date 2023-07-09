@@ -19,9 +19,10 @@ def median(L):
 
     if len(L) % 2 == 0:
 
-        return (kthSmallest(L, len(L)//2) + kthSmallest(L, len(L)//2 + 1))/2
+        return (kthSmallest(L, len(L) // 2) +
+                kthSmallest(L, len(L) // 2 + 1)) / 2
     else:
-        return kthSmallest(L, len(L)//2 + 1)
+        return kthSmallest(L, len(L) // 2 + 1)
 
 
 def kWindowMedian(L, k):

@@ -1,5 +1,6 @@
 
-def find_path(G: dict[str, list[str]], W: dict[tuple[str, str], int], s: str, t: str):
+def find_path(G: dict[str, list[str]],
+              W: dict[tuple[str, str], int], s: str, t: str):
 
     st = [(s, float('inf'), [s])]
 
@@ -22,7 +23,8 @@ def find_path(G: dict[str, list[str]], W: dict[tuple[str, str], int], s: str, t:
     return None
 
 
-def ford_fulkerson(G: dict[str, list[str]], W: dict[tuple[str, str], int], s: str, t: str):
+def ford_fulkerson(G: dict[str, list[str]],
+                   W: dict[tuple[str, str], int], s: str, t: str):
 
     while (res := find_path(G, W, s, t)) is not None:
 

@@ -1,5 +1,5 @@
 # Recall.ai Technical Interview 1 - Print all possible ending configurations
-# in Tic Tace Toe
+# in Tic Tac Toe
 
 visited = set()
 

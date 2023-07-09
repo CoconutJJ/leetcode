@@ -21,7 +21,8 @@ def css(L, k):
 
         while currK <= sumToHere[i]:
 
-            if (N := (sumToHere[i] - currK)) in sums and (i - sumIndex[N] + 1) - 1 >= 2:
+            if (N := (sumToHere[i] - currK)
+                ) in sums and (i - sumIndex[N] + 1) - 1 >= 2:
                 print(sumToHere[i], currK)
                 return True
             currK += k

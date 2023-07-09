@@ -46,7 +46,7 @@ class MinHeap:
     def bubbleUp(self):
 
         curr_idx = len(self.heap) - 1
-        parent_idx = (curr_idx - 1)//2
+        parent_idx = (curr_idx - 1) // 2
 
         while True:
 
@@ -64,7 +64,7 @@ class MinHeap:
                 self.heap[parent_idx] = self.heap[curr_idx]
                 self.heap[curr_idx] = parent_node
                 curr_idx = parent_idx
-                parent_idx = (parent_idx - 1)//2
+                parent_idx = (parent_idx - 1) // 2
             else:
                 break
 

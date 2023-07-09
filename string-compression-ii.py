@@ -6,7 +6,7 @@ def optimalCompressionLen(S: str, k: int):
     for c in S:
         s, n = curr
         if c == s:
-            curr = (s, n+1)
+            curr = (s, n + 1)
         else:
             encoding.append(curr)
             curr = (c, 1)
@@ -52,8 +52,8 @@ def optimalCompressionLen(S: str, k: int):
             # if cannot delete any more characters, we just sum up everything
             # left
             if k == 0:
-                mem[(prevCount, prevChar, i, k)] = encodelen(
-                    prevCount, prevChar, s, c) + optimalCompRec(c if s != prevChar else c + prevCount, s, i + 1, k)
+                mem[(prevCount, prevChar, i, k)] = encodelen(prevCount, prevChar, s, c) + \
+                    optimalCompRec(c if s != prevChar else c + prevCount, s, i + 1, k)
 
             else:
                 minL = float('inf')

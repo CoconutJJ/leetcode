@@ -5,7 +5,7 @@ def divisibleStrings(s, t):
     if len(s) % len(t) != 0:
         return -1
 
-    if s != (t * (len(s)//len(t))):
+    if s != (t * (len(s) // len(t))):
         return -1
 
     for i in range(len(s)):

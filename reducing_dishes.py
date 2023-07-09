@@ -8,7 +8,7 @@ def getZeroIndex(L):
 
     while i < j:
 
-        mid = (i + j)//2
+        mid = (i + j) // 2
 
         if L[mid] >= 0 and L[mid - 1] < 0:
             return mid

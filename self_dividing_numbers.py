@@ -32,7 +32,8 @@ class MyCalendar:
         if root is None:
             return False
 
-        if not (interval[1] < root.interval[0] or interval[0] > root.interval[1]):
+        if not (interval[1] < root.interval[0]
+                or interval[0] > root.interval[1]):
             return True
 
         else:

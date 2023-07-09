@@ -54,10 +54,13 @@ class PriorityQueue:
 
         curr_idx = idx
 
-        while (cmp_idx := min(
+        while (
+            cmp_idx := min(
                 self.__left_child_idx(curr_idx),
                 self.__right_child_idx(curr_idx),
-                key=lambda j: self.q[j][1] if j < len(self.q) else float('inf'))) < len(self.q):
+                key=lambda j: self.q[j][1] if j < len(
+                    self.q) else float('inf'))) < len(
+                self.q):
 
             cmp_r, cmp_p = self.q[cmp_idx]
 
@@ -148,7 +151,7 @@ class PriorityQueue:
         return id(r) in self.index
 
     def __parent_idx(self, idx):
-        return idx//2
+        return idx // 2
 
     def __left_child_idx(self, idx):
         return 2 * idx

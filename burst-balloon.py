@@ -28,7 +28,7 @@ def burstBalloon(L):
                     dp[(i, j)],
 
                     val(i - 1) * val(r) * val(j + 1) +
-                    burst(i, r - 1) + burst(r+1, j)
+                    burst(i, r - 1) + burst(r + 1, j)
 
                 )
 

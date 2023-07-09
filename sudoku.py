@@ -20,7 +20,7 @@ def possibleValues(i, j, grid):
         if grid[i][r] in values:
             values.remove(grid[i][r])
 
-    subi, subj = (i//3) * 3, (j//3) * 3
+    subi, subj = (i // 3) * 3, (j // 3) * 3
 
     for si in range(subi, subi + 3):
         for sj in range(subj, subj + 3):

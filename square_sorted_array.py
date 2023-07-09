@@ -8,7 +8,7 @@ def sortedSquares(A):
 
     while lo < hi:
 
-        i = (lo + hi)//2
+        i = (lo + hi) // 2
         # print(lo, hi)
         if A[i] < 0:
             lo = i + 1

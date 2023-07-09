@@ -44,7 +44,7 @@ def water7(nodes, edges, supply):
         max_supply_component_count = max(
             len(componentNodes), max_supply_component_count)
         N = len(componentNodes)
-        total_edges += (N*(N-1)/2 - edgeCount)
+        total_edges += (N * (N - 1) / 2 - edgeCount)
 
     unconn_component = []
 
@@ -55,7 +55,7 @@ def water7(nodes, edges, supply):
         N = len(s)
         s.remove(r)
         nodes_set = nodes_set - s
-        total_edges += (N*(N-1)/2 - e)
+        total_edges += (N * (N - 1) / 2 - e)
         heapq.heappush(unconn_component, N)
 
     curr_cost = 0
@@ -69,8 +69,8 @@ def water7(nodes, edges, supply):
         size += r
 
     print(total_edges, size * max_supply_component_count)
-    curr_cost += (size*max_supply_component_count)
-    total_edges += (size*max_supply_component_count)
+    curr_cost += (size * max_supply_component_count)
+    total_edges += (size * max_supply_component_count)
 
     return (total_edges, curr_cost)
 

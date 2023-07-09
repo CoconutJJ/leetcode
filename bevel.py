@@ -18,7 +18,8 @@ class TradeRequest():
 
 def ParseMarketData(mdLine):
     tokens = mdLine.split()
-    return [MarketData(price, size) for price, size in zip(tokens[1::2], tokens[::2])]
+    return [MarketData(price, size)
+            for price, size in zip(tokens[1::2], tokens[::2])]
 
 
 class Hedger():
@@ -42,7 +43,7 @@ class Hedger():
 
         self.remaining_risk += qty * riskPerQty
 
-        units = math.floor(self.remaining_risk/riskPerQty)
+        units = math.floor(self.remaining_risk / riskPerQty)
 
         count = 0
         while self.remaining_risk >= riskPerQty:
@@ -78,7 +79,8 @@ class Hedger():
                 self.remaining_risk -= units * riskPerQty
                 count += units
 
-        return "%d %f" % (riskPerQty * count, TotalFillPriceCost/TotalFillPriceCount)
+        return "%d %f" % (riskPerQty * count,
+                          TotalFillPriceCost / TotalFillPriceCount)
 
 
 linesParsed = 0

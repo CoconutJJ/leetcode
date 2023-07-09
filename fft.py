@@ -3,7 +3,8 @@ import math
 
 def roots_of_unity(n: int) -> list[complex]:
 
-    return [complex(math.cos(2 * math.pi/r), math.sin(2 * math.pi/r)) for r in range(n, 0, -1)]
+    return [complex(math.cos(2 * math.pi / r), math.sin(2 * math.pi / r))
+            for r in range(n, 0, -1)]
 
 
 def fft(A: list[int]) -> list[complex]:
@@ -29,11 +30,11 @@ def fft(A: list[int]) -> list[complex]:
 
     y = [0 for i in range(len(A))]
 
-    for i in range(0, len(A)//2):
+    for i in range(0, len(A) // 2):
 
         y[i] = even_eval[i] + w[i] * odd_eval[i]
 
-        y[i + len(A)//2] = even_eval[i] - w[i] * odd_eval[i]
+        y[i + len(A) // 2] = even_eval[i] - w[i] * odd_eval[i]
 
     return y
 

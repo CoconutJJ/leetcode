@@ -49,7 +49,7 @@ def nQueen(board, col):
                 cols.remove(col)
                 diagonals.remove(i - col)
                 diagonals.remove(i + col)
-            except:
+            except BaseException:
                 continue
 
     return False

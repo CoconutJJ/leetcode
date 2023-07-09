@@ -29,7 +29,7 @@ def choose(n, k):
     if n < k:
         return 0
 
-    return factr(n)/(factr(k) * factr(n - k))
+    return factr(n) / (factr(k) * factr(n - k))
 
 
 def oppositeSums(L):

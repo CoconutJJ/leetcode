@@ -13,10 +13,10 @@ def longestSubsequence(A, B):
 
             if A[i] == B[j]:
                 mem[(i, j)] = max(1 + LSRec(i + 1, j + 1),
-                                  LSRec(i, j+1), LSRec(i + 1, j))
+                                  LSRec(i, j + 1), LSRec(i + 1, j))
             else:
                 mem[(i, j)] = max(LSRec(i + 1, j + 1),
-                                  LSRec(i, j+1), LSRec(i + 1, j))
+                                  LSRec(i, j + 1), LSRec(i + 1, j))
 
         return mem[(i, j)]
 

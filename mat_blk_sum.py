@@ -26,8 +26,11 @@ def matrixBlockSum(mat, K):
     for r in range(len(mat)):
         for c in range(len(mat[r])):
 
-            answer[r][c] = prefixSum[idx(r + K, c + K)] - prefixSum[idx(
-                r - K, c + K)] - prefixSum[idx(r+K, c-K)] + prefixSum[idx(r-K, c-K)]
+            answer[r][c] = prefixSum[idx(r + K,
+                                         c + K)] - prefixSum[idx(r - K,
+                                                                 c + K)] - prefixSum[idx(r + K,
+                                                                                         c - K)] + prefixSum[idx(r - K,
+                                                                                                                 c - K)]
 
     return answer
 

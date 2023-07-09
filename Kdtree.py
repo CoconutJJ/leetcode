@@ -38,7 +38,7 @@ def buildKdTree(L: list[Point]):
         if len(points) == 0:
             return None
 
-        pt = kthSmallest(points, len(points)//2, lambda p: p.pt[split_key])
+        pt = kthSmallest(points, len(points) // 2, lambda p: p.pt[split_key])
 
         l = []
         r = []

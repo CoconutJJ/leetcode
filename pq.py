@@ -13,13 +13,13 @@ class PriorityQueue:
         return len(self.q)
 
     def _parent(i):
-        return (i-1)//2
+        return (i - 1) // 2
 
     def _lchild(i):
-        return 2*i + 1
+        return 2 * i + 1
 
     def _rchild(i):
-        return 2*i + 2
+        return 2 * i + 2
 
     def _percdown(self, i):
 

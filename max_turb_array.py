@@ -8,7 +8,7 @@ def computeTurb(A, even_k):
     for k in range(len(A) - 1):
 
         if (k % 2 == 0 if even_k else k % 2 != 0):
-            if A[k] > A[k+1]:
+            if A[k] > A[k + 1]:
                 curr_len += 1
             else:
                 if curr_len + 1 > max_len:
